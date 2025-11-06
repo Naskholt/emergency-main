@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/burger.css" />
     <link rel="stylesheet" href="css/cards.css" />
-    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/forms.css" />
     <link rel="icon" type="image/png" href="img/fav.png" />
     <title>Emergency Site</title>
   </head>
@@ -40,7 +40,63 @@
           <h2>Overskrift</h2>
           <p>Tekst</p>
         </article>
-        <form id="webform"></form>
+        <form id="webform">
+          <!-- Operator info -->
+          <div class="form-group">
+            <label for="operator_id">Operator codename</label>
+            <input type="text" id="operator_id" name="operator_id" required />
+            <p class="error-message">Please enter a value</p>
+          </div>
+
+          <div class="form-group">
+            <label for="faction">Faction / division</label>
+            <input type="text" id="faction" name="faction" required />
+            <p class="error-message">Please enter a value</p>
+          </div>
+
+          <!-- Comms -->
+          <div class="form-group">
+            <label for="contact_channel"
+              >Contact channel (encrypted email)</label
+            >
+            <input
+              type="email"
+              id="contact_channel"
+              name="contact_channel"
+              required
+            />
+            <p class="error-message">Please enter a value</p>
+          </div>
+
+          <!-- Security -->
+          <div class="form-group">
+            <label for="override_key">AI override key</label>
+            <input
+              type="password"
+              id="override_key"
+              name="override_key"
+              aria-describedby="password-instructions password-error"
+              minlength="8"
+              required
+            />
+            <p class="error-message">Please enter a value</p>
+          </div>
+
+          <div class="form-group">
+            <label for="terms">
+              <input
+                type="checkbox"
+                id="terms"
+                name="accept_terms"
+                value="yes"
+                required
+              />
+              I confirm protocol α-9 against hostile AI
+            </label>
+          </div>
+
+          <button>Initialize access</button>
+        </form>
       </section>
       <section id="form-summary">
         <h2>Summary</h2>

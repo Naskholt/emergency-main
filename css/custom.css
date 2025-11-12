@@ -3,20 +3,20 @@
   --color-bg: #fceb94; /* page background */
 
   /* Header */
-  --color-head-bg: #ff4b00;
+  --color-head-bg: #ff0033;
 
   /* Logotype */
   --color-logotype-bg: #000;
-  --color-text-logotype: #fffae2;
+  --color-text-logotype: cyan;
   --font-logotype-size: 2rem;
   font-weight: medium;
 
   /* Global menu */
   --color-menu-bg: #6f90eb;
   /* Links */
-  --color-link-bg: #fffae2;
-  --color-link-hover: #fff; /* used */
-  --color-link-active: #99958f; /* used */
+  --color-link-bg: #fff;
+  /* --color-link-hover: #fff;  */
+  --color-link-active: #99958f;
   --border-radius-links: 30px;
 
   /* Headlines og rubrik */

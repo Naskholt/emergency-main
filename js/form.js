@@ -1,10 +1,12 @@
 const form = document.querySelector("form");
 
-const OperatorOutput = document.querySelector("#Operator_output");
-const FactionOutput = document.querySelector("#Faction_output");
-const ContactOutput = document.querySelector("#Contact_output");
-const OverrideOutput = document.querySelector("#Override_output");
-const TermsOutput = document.querySelector("#Terms_output");
+const nameOutput = document.querySelector("#name_output");
+const locationOutput = document.querySelector("#location_output");
+const employmentOutput = document.querySelector("#employment_output");
+const trustOutput = document.querySelector("#trust_output");
+const mentalHealthOutput = document.querySelector("#mental_health_output");
+const dependenceOutput = document.querySelector("#ai_dependence_output");
+const consentOutput = document.querySelector("#consent_output");
 
 function cancelPopup(event) {
   event.preventDefault();
@@ -16,22 +18,22 @@ function handleSubmit(event) {
   // 1. Saml værdierne fra formularen
   const formData = new FormData(form);
 
-  const operator = formData.get("operator_id");
-
-  const faction = formData.get("faction");
-
-  const contact = formData.get("contact_channel");
-
-  const override = formData.get("override_key");
-
-  const accept = formData.get("accept_terms");
+  const name = formData.get("name");
+  const location = formData.get("location");
+  const employment = formData.get("employment");
+  const trust = formData.get("trust");
+  const mentalHealth = formData.get("mental_health");
+  const dependence = formData.get("ai_dependence");
+  const consent = formData.get("consent");
 
   // 2. Vis værdierne i de rigtige output-felter
-  OperatorOutput.textContent = operator;
-  FactionOutput.textContent = faction;
-  ContactOutput.textContent = contact;
-  OverrideOutput.textContent = override;
-  TermsOutput.textContent = accept;
+  nameOutput.textContent = name || "Anonymous";
+  locationOutput.textContent = location;
+  employmentOutput.textContent = employment;
+  trustOutput.textContent = trust;
+  mentalHealthOutput.textContent = mentalHealth;
+  dependenceOutput.textContent = dependence;
+  consentOutput.textContent = consent;
 
   form.reset();
 }

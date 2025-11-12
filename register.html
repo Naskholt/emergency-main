@@ -19,7 +19,7 @@
     <header>
       <nav>
         <div id="logotype-wrapper" class="logo">
-          <a href="index.html"> LOGO-TYPE </a>
+          <a href="index.html"> The Age of Automation </a>
         </div>
         <ul class="menu">
           <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
@@ -34,81 +34,88 @@
     </header>
 
     <main>
-      <h1>INDBERET</h1>
+      <h1>Voices of the Last Humans</h1>
       <section id="form-section">
         <article id="form-info">
-          <h2>Overskrift</h2>
-          <p>Tekst</p>
+          <h2>Post-AI Takeover Human Impact Survey</h2>
         </article>
         <form id="webform">
-          <!-- Operator info -->
-          <div class="form-group">
-            <label for="operator_id">Operator codename</label>
-            <input type="text" id="operator_id" name="operator_id" required />
-            <p class="error-message">Please enter a value</p>
-          </div>
+ 
+  <div class="form-group">
+    <label for="name">Human name (optional)</label>
+    <input type="text" id="name" name="name" placeholder="Anonymous citizen" />
+    <p class="error-message">Please enter a value</p>
+  </div>
 
-          <div class="form-group">
-            <label for="faction">Faction / division</label>
-            <input type="text" id="faction" name="faction" required />
-            <p class="error-message">Please enter a value</p>
-          </div>
+  <div class="form-group">
+    <label for="location">Current living zone</label>
+    <select id="location" name="location" required>
+      <option value="">Select your zone</option>
+      <option value="Østerbro">Østerbro</option>
+      <option value="Vesterbro">Vesterbro</option>
+      <option value="Hvidovre">Hvidovre</option>
+      <option value="Albertslund">Albertslund</option>
+      <option value="Amager">Amager</option>
+      <option value="Nørrebro">Nørrebro</option>
+      <option value="Nord-sjælland">Nord-sjælland</option>
+    </select>
+    <p class="error-message">Please select a zone</p>
+  </div>
 
-          <!-- Comms -->
-          <div class="form-group">
-            <label for="contact_channel"
-              >Contact channel (encrypted email)</label
-            >
-            <input
-              type="email"
-              id="contact_channel"
-              name="contact_channel"
-              required
-            />
-            <p class="error-message">Please enter a value</p>
-          </div>
+  <div class="form-group">
+    <label for="employment">What happened to your job after AI automation?</label>
+    <select id="employment" name="employment" required>
+      <option value="">Choose one</option>
+      <option value="lost">Lost employment to AI systems</option>
+      <option value="changed">Still employed but job role changed</option>
+      <option value="adapted">Adapted by working with AI</option>
+      <option value="none">Unaffected</option>
+    </select>
+    <p class="error-message">Please choose an answer</p>
+  </div>
 
-          <!-- Security -->
-          <div class="form-group">
-            <label for="override_key">AI override key</label>
-            <input
-              type="password"
-              id="override_key"
-              name="override_key"
-              aria-describedby="password-instructions password-error"
-              minlength="8"
-              required
-            />
-            <p class="error-message">Please enter a value</p>
-          </div>
+  <div class="form-group">
+    <label for="trust">How much do you trust AI governance?</label>
+    <input type="range" id="trust" name="trust" min="0" max="100" value="40" />
+    <p class="error-message">Please enter a value</p>
+  </div>
 
-          <div class="form-group">
-            <label for="terms">
-              <input
-                type="checkbox"
-                id="terms"
-                name="accept_terms"
-                value="yes"
-                required
-              />
-              I confirm protocol α-9 against hostile AI
-            </label>
-          </div>
+  <div class="form-group">
+    <label for="mental_health">How has AI affected your mental well-being?</label>
+    <textarea id="mental_health" name="mental_health" rows="3" placeholder="Describe your thoughts..." required></textarea>
+    <p class="error-message">Please share your experience</p>
+  </div>
 
-          <button>Initialize access</button>
-        </form>
+  <div class="form-group">
+    <label for="ai_dependence">How dependent are you on AI technology?</label>
+    <input type="number" id="ai_dependence" name="ai_dependence" min="0" max="10" placeholder="0–10 scale" required />
+    <p class="error-message">Please enter a value</p>
+  </div>
+
+  <div class="form-group">
+    <label>
+      <input type="checkbox" id="consent" name="consent" required />
+      I consent to share my experience with remaining human networks.
+    </label>
+    <p class="error-message">Please tick the box</p>
+  </div>
+
+  <button>Submit Human Report</button>
+</form>
       </section>
       <section id="form-summary">
-        <h2>Summary</h2>
+        <h2> AI Analysis Output</h2>
         <article>
           <p class="placeholder">Opsummering</p>
         </article>
         <div>
-    <p>Operator ID: <span id="Operator_output"></span></p>
-    <p>Faction: <span id="Faction_output"></span></p>
-    <p>Contact: <span id="Contact_output"></span></p>
-    <p>Override Key: <span id="Override_output"></span></p>
-    <p>Terms accepted: <span id="Terms_output"></span></p>
+  <p>Name: <span id="name_output"></span></p>
+  <p>Zone: <span id="location_output"></span></p>
+  <p>Employment Status: <span id="employment_output"></span></p>
+  <p>Trust in AI: <span id="trust_output"></span>%</p>
+  <p>Mental Health Report: <span id="mental_health_output"></span></p>
+  <p>Dependence Level: <span id="ai_dependence_output"></span>/10</p>
+  <p>Data Consent: <span id="consent_output"></span></p>
       </section>
     </main>
     <footer>

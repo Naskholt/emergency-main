@@ -88,7 +88,7 @@ button:active {
 
 #form-section,
 #form-summary {
-  background-color: var(--info-background-color);
+  background-color: whitesmoke;
   padding: 0;
 }
 #form-summary h2 {
